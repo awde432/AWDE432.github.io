@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /releases/
+Sitemap: https://awde432.github.io/sitemap.xml
