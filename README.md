@@ -16,10 +16,10 @@ ViMoxPC 是一款面向 64 位 Windows 的远程控制工具，支持远程协�
 
 ## 下载
 
-- 最新版本：**v1.0.0**
-- 下载页：https://github.com/awde432/AWDE432.github.io/releases/tag/v1.0.0
-- 直接下载：https://github.com/awde432/AWDE432.github.io/releases/download/v1.0.0/ViMoxPC.exe
-- 文件为单文件可执行程序（约 176 MB），**免安装**，双击即可运行。
+- 最新版本：**v1.1.0**
+- 下载页：https://github.com/awde432/AWDE432.github.io/releases/tag/v1.1.0
+- 直接下载：https://github.com/awde432/AWDE432.github.io/releases/download/v1.1.0/ViMoxPC_Setup.exe
+- 文件为 Windows 安装包（约 141 MB），下载后运行安装程序即可使用。
 
 **系统要求**：64 位 Windows 10（推荐）、Windows 11（可运行）。32 位系统与 Windows 7 无法运行。
 
