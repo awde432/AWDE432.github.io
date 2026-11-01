@@ -1806,7 +1806,7 @@ html.anim-on .reveal.is-in{opacity:1;transform:none}
 .dl-copy{position:absolute;top:8px;right:8px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#e6edf3;font-size:.72rem;padding:4px 10px;border-radius:6px;cursor:pointer;font-family:inherit}
 .dl-copy:hover{background:rgba(255,255,255,.18)}
 .dl-copy.done{background:#238636;border-color:#2ea043}
-.dl-modal-note{font-size:.85rem;color:var(--muted,#666)}
+.dl-modal-note{font-size:.85rem;color:var(--muted,#666)} .dl-modal-warn{margin:0 0 14px;padding:12px 14px;border:1px solid rgba(230,162,60,.55);background:rgba(255,244,220,.92);border-radius:10px;font-size:.9rem;line-height:1.75;color:#5b3d0a} .dl-modal-warn b{color:#a05a00}
 .dl-modal-legal{font-size:.78rem;color:var(--muted,#888);border-top:1px solid rgba(0,0,0,.08);margin:14px 0 0;padding-top:10px;line-height:1.6}
 .dl-modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
 .dl-modal-actions .btn{flex:1;min-width:200px;text-align:center}
@@ -1875,6 +1875,10 @@ html.anim-on .reveal.is-in{opacity:1;transform:none}
 <div class="dl-modal" id="dlModal" onclick="if(event.target===this)closeDlModal()">
   <div class="dl-modal-card">
     <h3>先说句实在话：直接下载可能非常非常慢</h3>
+    <div class="dl-modal-warn">
+      <p><b>中国大陆下载提示：</b>ViMoxPC 安装包约 141MB，托管在 GitHub 海外服务器。中国大陆网络下载这种大型文件时，可能会出现<b>下载不完全</b>，导致安装包报错（例如提示 “The setup files are corrupted”）。</p>
+      <p>如果你多次尝试下载均失败，可以加入官方用户群 <b>QQ 群：1095743124</b>，在群里说明情况，群内可能帮助你获取安装包。</p>
+    </div>
     <p>ViMoxPC 的安装包托管在 <b>GitHub</b> 上，国内直连下载速度很不稳定，浏览器点下载大概率要等很久甚至失败。给你两个选择：</p>
     <ol>
       <li><b>复制下面的代码</b>，粘贴到你电脑的 Python 环境（IDLE / 终端）运行：它会先自动测速，在单线程和 8 线程并发里选<b>更快的那一种</b>来下载（不搞固定线程数）；下载前会问你保存到哪个文件夹，输错了会自动校验并回退提示；终端实时打印进度、速度和剩余时间；<b>中途不想下了，按 q 键取消，自动删除半成品并退出</b>。</li>
