@@ -1296,6 +1296,7 @@ p{margin:0 0 var(--s3)}
       <article>
         <h3>五、更多服务功能与使用规范</h3>
         <p>本软件“更多服务”模块及顶部工具栏集成以下辅助功能，用户在使用前应仔细阅读各功能的风险提示：</p>
+        <p style="background:var(--brand-050);border:1px solid var(--brand-200);border-left:3px solid var(--ok);padding:var(--s3) var(--s4)"><b>用途边界声明：</b>以下工具仅面向<b>学习、教学与已获合法授权的环境</b>提供技术能力，任何对他人设备、网络的未授权扫描、探测、入侵或破坏行为均与本软件无关且被明确禁止。使用者须自行确保所有操作均在合法授权范围内进行。</p>
         <ol>
           <li><b>视频格式转换：</b>仅用于转换用户拥有合法权利的视频文件。用户不得利用本功能处理侵犯他人著作权、肖像权或其他合法权益的音视频内容。</li>
           <li><b>音频格式转换：</b>仅用于转换用户拥有合法权利的音频文件。因转换受版权保护的内容而产生的法律责任，由用户自行承担。</li>
@@ -1524,7 +1525,7 @@ p{margin:0 0 var(--s3)}
       <h3>安全验证：VirusTotal 检测报告与如何核对文件真伪</h3>
       <p>ViMoxPC 由个人开发者免费维护，未购买商业代码签名证书，因此 Windows 与部分安全软件可能提示"未知发布者"或误报风险。这是未签名个人软件的正常现象，不代表文件被篡改。官方安装包已提交 VirusTotal 多引擎检测，<b>68 个安全引擎 0 检出</b>，结论安全。请按下面步骤核对文件真伪：</p>
       <ul class="bullets">
-        <li><b>查看 VirusTotal 公开检测报告。</b>点击链接查看官方安装包的实时多引擎检测报告：<a href="https://www.virustotal.com/gui/file/4f9ee74537dea672136dceaa40748f072c81de5ef43ae02b59fe556588e0aa35" target="_blank" rel="noopener">VirusTotal 检测报告（68 引擎，0 检出）</a></li>
+        <li><b>查看 VirusTotal 公开检测报告。</b>点击链接查看官方安装包的实时多引擎检测报告：<a href="https://www.virustotal.com/gui/file/4f9ee74537dea672136dceaa40748f072c81de5ef43ae02b59fe556588e0aa35" target="_blank" rel="noopener">VirusTotal 检测报告（68 引擎，0 检出）</a>；也可直接访问 VirusTotal 官网，将本页 SHA256 哈希粘贴到搜索框自行复核，结论应与本页一致。</li>
         <li><b>核对 SHA256 哈希（可选辅助）。</b>下载后打开命令提示符（Win+R 输入 cmd），运行 <code>certutil -hashfile "你的下载路径\ViMoxPC_Setup.exe" SHA256</code>，结果应与本页哈希一致：<br><code style="word-break:break-all">4F9EE74537DEA672136DCEAA40748F072C81DE5EF43AE02B59FE556588E0AA35</code></li>
         <li><b>只从官方渠道获取。</b>本页面、QQ 群（群号 1095743124）群文件与 GitHub Release 为唯一官方来源；第三方站点版本可能被二次打包。</li>
         <li><b>杀软误报处理。</b>若安全软件拦截本程序，请提交误报申诉（360 / 腾讯电脑管家 / 火绒 / Windows Defender 均提供误报反馈入口），说明为个人开发者使用 Nuitka 编译的免费远程控制软件即可。</li>
