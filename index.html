@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -1508,10 +1508,11 @@ p{margin:0 0 var(--s3)}
     </div>
 
     <div class="notice" style="margin-top:var(--s6)">
-      <h3>安全验证：为什么没有代码签名，以及如何核对文件真伪</h3>
-      <p>ViMoxPC 由个人开发者免费维护，未购买商业代码签名证书，因此 Windows 与部分安全软件可能提示"未知发布者"或误报风险。这是未签名个人软件的正常现象，不代表文件被篡改。请按下面步骤核对文件真伪：</p>
+      <h3>安全验证：VirusTotal 检测报告与如何核对文件真伪</h3>
+      <p>ViMoxPC 由个人开发者免费维护，未购买商业代码签名证书，因此 Windows 与部分安全软件可能提示"未知发布者"或误报风险。这是未签名个人软件的正常现象，不代表文件被篡改。官方安装包已提交 VirusTotal 多引擎检测，<b>68 个安全引擎 0 检出</b>，结论安全。请按下面步骤核对文件真伪：</p>
       <ul class="bullets">
-        <li><b>核对 SHA256 哈希。</b>下载后打开命令提示符（Win+R 输入 cmd），运行 <code>certutil -hashfile "你的下载路径\ViMoxPC_Setup.exe" SHA256</code>，结果必须与本页哈希完全一致：<br><code style="word-break:break-all">4F9EE74537DEA672136DCEAA40748F072C81DE5EF43AE02B59FE556588E0AA35</code></li>
+        <li><b>查看 VirusTotal 公开检测报告。</b>点击链接查看官方安装包的实时多引擎检测报告：<a href="https://www.virustotal.com/gui/file/4f9ee74537dea672136dceaa40748f072c81de5ef43ae02b59fe556588e0aa35" target="_blank" rel="noopener">VirusTotal 检测报告（68 引擎，0 检出）</a></li>
+        <li><b>核对 SHA256 哈希（可选辅助）。</b>下载后打开命令提示符（Win+R 输入 cmd），运行 <code>certutil -hashfile "你的下载路径\ViMoxPC_Setup.exe" SHA256</code>，结果应与本页哈希一致：<br><code style="word-break:break-all">4F9EE74537DEA672136DCEAA40748F072C81DE5EF43AE02B59FE556588E0AA35</code></li>
         <li><b>只从官方渠道获取。</b>本页面、QQ 群（群号 1095743124）群文件与 GitHub Release 为唯一官方来源；第三方站点版本可能被二次打包。</li>
         <li><b>杀软误报处理。</b>若安全软件拦截本程序，请提交误报申诉（360 / 腾讯电脑管家 / 火绒 / Windows Defender 均提供误报反馈入口），说明为个人开发者使用 Nuitka 编译的免费远程控制软件即可。</li>
       </ul>
