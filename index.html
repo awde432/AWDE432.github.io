@@ -69,6 +69,9 @@ a:hover{color:var(--brand-deep);text-decoration:underline}
 .brand .mark path{fill:none;stroke:var(--brand);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .footer .mark path{stroke:#7cc0f7}
 .brand .ver{font-family:var(--mono);font-size:.6875rem;font-weight:400;color:var(--ink-500);letter-spacing:.06em}
+.official-tag{display:inline-block;font-family:var(--sans);font-size:.6875rem;font-weight:600;color:#fff;background:var(--ok);padding:1px 8px;border-radius:2px;letter-spacing:.08em;align-self:center}
+.hero-official{margin:var(--s4) 0 0;font-size:.875rem;color:var(--ink-600)}
+.hero-official b{color:var(--ink-900)}
 .nav-links{display:flex;gap:var(--s5);margin-left:auto;flex-wrap:wrap}
 .nav-links a{font-size:.8125rem;color:var(--ink-600);letter-spacing:.01em}
 .nav-links a:hover{color:var(--brand);text-decoration:none}
@@ -312,8 +315,9 @@ p{margin:0 0 var(--s3)}
 </script>
 </head>
 <body>
+<div class="read-progress" aria-hidden="true"></div>
 
-<!-- ============ 安全认证横幅（VirusTotal 公开证据） ============ -->
+
 <div class="trust-banner" style="background:linear-gradient(90deg,#0f7b4f,#0a5ea8);color:#fff;padding:12px 20px;text-align:center;font-size:15px;line-height:1.6;">
   <span style="display:inline-block;background:#fff;color:#0f7b4f;font-weight:700;padding:2px 12px;border-radius:2px;margin-right:10px;">SECURITY VERIFIED</span>
   官方安装包 <b>ViMoxPC_Setup.exe</b> 已通过 <b>VirusTotal 68 引擎检测，0 检出</b>（<a href="https://www.virustotal.com/gui/file/4f9ee74537dea672136dceaa40748f072c81de5ef43ae02b59fe556588e0aa35" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;">查看公开检测报告</a>）
@@ -322,7 +326,7 @@ p{margin:0 0 var(--s3)}
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top"><img class="mark" src="https://awde432.github.io/assets/vimoxPC.ico" alt="" width="28" height="28">ViMoxPC<span class="ver">v1.0.0</span></a>
+    <a class="brand" href="#top"><img class="mark" src="https://awde432.github.io/assets/vimoxPC.ico" alt="" width="28" height="28">ViMoxPC<span class="ver">v1.0.0</span><span class="official-tag">官方发布站</span></a>
     <nav class="nav-links" aria-label="主导航">
       <a href="#what">这是什么</a>
       <a href="#features">功能</a>
@@ -343,11 +347,12 @@ p{margin:0 0 var(--s3)}
 
 <main id="top">
 
-<!-- ============ HERO ============ -->
+
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">局域网远程控制 · Windows 桌面端</p>
+    <p class="eyebrow">ViMoxPC 官方发布页 · 局域网远程控制 · Windows 桌面端</p>
     <h1>把另一台电脑，<br><span class="thin">变成你面前的这一台。</span></h1>
+    <p class="hero-official">本页面为 <b>ViMoxPC 官方唯一发布渠道</b>。软件由独立开发者（GitHub 账号 awde432）开发并维护，无代理商、无第三方分发；版本、哈希与安全检测报告均在本页公开可查。</p>
     <p class="lede">ViMoxPC 是一款面向<b>局域网</b>的远程控制软件：在同一网络内，你可以在自己的屏幕上看到并操作另一台电脑，传文件、做演示与维护——不需要公网、不需要额外中转服务器。软件需使用 GitHub 账号登录，且一次只与一台设备建立连接。</p>
 
     <div class="hero-actions">
@@ -372,14 +377,14 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 01 快速问答 ============ -->
+
 <section class="section" id="quick">
   <div class="wrap">
     <div class="section-head">
       <div class="num">01</div>
       <div>
-        <h2>你可能最想先知道的几件事</h2>
-        <p class="section-sub">不绕弯子，先把最容易产生顾虑的问题一次说清。下面每一条都是可以核验的产品事实，而不是宣传话术。</p>
+        <h2>官方说明：先回答几个常见问题</h2>
+        <p class="section-sub">以下均为官方公开的产品事实，可在本页、GitHub Release 与安装包哈希中核验，不是宣传话术。</p>
       </div>
     </div>
 
@@ -412,7 +417,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 02 它是什么 ============ -->
+
 <section class="section alt" id="what">
   <div class="wrap">
     <div class="section-head">
@@ -446,7 +451,7 @@ p{margin:0 0 var(--s3)}
       </aside>
     </div>
 
-    <!-- 可交互 3D 界面模型：真实 HTML 还原，拖拽旋转查看 -->
+    
     <div class="vimox-3d-sec" id="vimox3d">
       <div class="model-head">
         <h3>界面模型：拖拽旋转查看</h3>
@@ -519,7 +524,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 03 功能 ============ -->
+
 <section class="section" id="features">
   <div class="wrap">
     <div class="section-head">
@@ -646,7 +651,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 04 技术底座 ============ -->
+
 <section class="section alt" id="tech">
   <div class="wrap">
     <div class="section-head">
@@ -730,7 +735,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 05 为什么选它 ============ -->
+
 <section class="section" id="why">
   <div class="wrap">
     <div class="section-head">
@@ -787,7 +792,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 06 规格与性能 ============ -->
+
 <section class="section alt" id="spec">
   <div class="wrap">
     <div class="section-head">
@@ -843,7 +848,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 07 使用场景 ============ -->
+
 <section class="section" id="cases">
   <div class="wrap">
     <div class="section-head">
@@ -888,7 +893,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 08 服务与支持 ============ -->
+
 <section class="section alt" id="service">
   <div class="wrap">
     <div class="section-head">
@@ -929,7 +934,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 09 免费与授权 ============ -->
+
 <section class="section" id="free">
   <div class="wrap">
     <div class="section-head">
@@ -971,7 +976,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 10 账号、数据与广告 ============ -->
+
 <section class="section alt" id="privacy-brief">
   <div class="wrap">
     <div class="section-head">
@@ -1005,7 +1010,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 11 安全 ============ -->
+
 <section class="section" id="security">
   <div class="wrap">
     <div class="section-head">
@@ -1056,7 +1061,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 12 系统要求 ============ -->
+
 <section class="section alt" id="require">
   <div class="wrap">
     <div class="section-head">
@@ -1102,7 +1107,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 13 上手 ============ -->
+
 <section class="section" id="start">
   <div class="wrap">
     <div class="section-head">
@@ -1145,7 +1150,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 14 常见问题 ============ -->
+
 <section class="section alt" id="faq">
   <div class="wrap">
     <div class="section-head">
@@ -1227,7 +1232,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 15 条款声明 ============ -->
+
 <section class="section" id="terms">
   <div class="wrap">
     <div class="section-head">
@@ -1359,7 +1364,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 16 隐私政策 ============ -->
+
 <section class="section alt" id="privacy">
   <div class="wrap">
     <div class="section-head">
@@ -1434,7 +1439,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 17 更新日志 ============ -->
+
 <section class="section" id="updates">
   <div class="wrap">
     <div class="section-head">
@@ -1473,7 +1478,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 18 下载 ============ -->
+
 <section class="section alt" id="download">
   <div class="wrap">
     <div class="section-head">
@@ -1505,6 +1510,7 @@ p{margin:0 0 var(--s3)}
           <a class="btn btn-ghost" href="#start">先看使用步骤</a>
         </div>
         <p class="dl-meta">下载前请确认：你的系统为 64 位；你打算连接的设备处于同一局域网；你已获得对被控设备的操作授权。</p>
+        <p class="dl-meta" style="margin-top:var(--s4);padding-top:var(--s3);border-top:1px solid var(--line)"><b>官方发布信息</b>：本版本 1.0.0 由独立开发者（GitHub 账号 awde432）发布于 <a href="https://github.com/awde432/AWDE432.github.io/releases" target="_blank" rel="noopener">GitHub Release 官方发布页</a>。SHA256：<code style="word-break:break-all">4F9EE74537DEA672136DCEAA40748F072C81DE5EF43AE02B59FE556588E0AA35</code>，可在 VirusTotal 官网粘贴复核。</p>
       </div>
 
       <div>
@@ -1540,7 +1546,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 19 联系 ============ -->
+
 <section class="section" id="contact">
   <div class="wrap">
     <div class="section-head">
@@ -1589,7 +1595,7 @@ p{margin:0 0 var(--s3)}
   </div>
 </section>
 
-<!-- ============ 重要声明 ============ -->
+
 <section class="section alt" id="notice">
   <div class="wrap">
     <div class="notice">
@@ -1616,6 +1622,7 @@ p{margin:0 0 var(--s3)}
         <p class="brand"><img class="mark" src="https://awde432.github.io/assets/vimoxPC.ico" alt="" width="28" height="28">ViMoxPC</p>
         <p style="margin-top:var(--s3);max-width:34ch">面向局域网的 Windows 远程控制软件。一对一连接、需 GitHub 账号登录、免费使用、无广告、无捆绑。</p>
         <p>当前版本：1.0.0 · 推荐 Windows 10（64 位）</p>
+        <p>本网站为 ViMoxPC 唯一官方发布站，由开发者本人直接维护，无代理商、无第三方分发。</p>
       </div>
       <div>
         <h4>产品</h4>
@@ -1650,8 +1657,8 @@ p{margin:0 0 var(--s3)}
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ViMoxPC. 保留所有权利。本软件仅用于合法、已获授权的远程协助、教学演示与设备管理场景。</p>
-      <p>请从官方渠道获取程序，避免使用来源不明的二次打包版本。</p>
+      <p>© ViMoxPC. 保留所有权利。由独立开发者（GitHub 账号 awde432）开发并维护。本软件仅用于合法、已获授权的远程协助、教学演示与设备管理场景。</p>
+      <p>官方唯一发布渠道：<a href="https://awde432.github.io/" target="_blank" rel="noopener">本站</a> · <a href="https://github.com/awde432/AWDE432.github.io/releases" target="_blank" rel="noopener">GitHub Release</a> · QQ 群（群号 1095743124）。请从官方渠道获取程序，避免使用来源不明的二次打包版本。</p>
     </div>
   </div>
 </footer>
@@ -1693,6 +1700,25 @@ html.anim-on .reveal.is-in{opacity:1;transform:none}
 /* FAQ 平滑展开 */
 .faq-item .a{overflow:hidden;max-height:0;opacity:0;padding:0 0 0 30px;transition:max-height .32s ease,opacity .32s ease,padding-bottom .32s ease}
 .faq-item.is-open .a{max-height:var(--a-h,600px);opacity:1;padding:0 0 var(--s5) 30px}
+
+/* 阅读进度条（顶部细条） */
+.read-progress{position:fixed;top:0;left:0;z-index:9999;height:3px;width:0;background:linear-gradient(90deg,var(--brand),#4c9aff);pointer-events:none}
+
+/* 标题下划线生长（随 reveal 进入视口） */
+html.anim-on .section-head h2{position:relative;padding-bottom:.32em}
+html.anim-on .section-head h2::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;border-radius:2px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.22,.61,.36,1) .12s}
+html.anim-on .section-head.reveal.is-in h2::after{transform:scaleX(1)}
+
+/* Hero 柔光斑漂移（低透明、慢速，不干扰阅读） */
+html.anim-on .hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(560px 300px at 16% 18%,rgba(0,120,212,.10),transparent 62%),
+  radial-gradient(480px 260px at 84% 32%,rgba(76,154,255,.08),transparent 62%);
+  animation:heroDrift 26s ease-in-out infinite alternate}
+@keyframes heroDrift{from{transform:translate3d(0,0,0)}to{transform:translate3d(2.5%,-2%,0)}}
+
+/* 品牌标志呼吸光晕（柔和） */
+html.anim-on .brand .mark{border-radius:6px;animation:brandGlow 4.5s ease-in-out infinite}
+@keyframes brandGlow{0%,100%{box-shadow:0 0 0 rgba(0,120,212,0)}50%{box-shadow:0 0 16px rgba(0,120,212,.32)}}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
@@ -1902,7 +1928,7 @@ html.anim-on .reveal.is-in{opacity:1;transform:none}
 })();
 </script>
 
-<!-- ============ 下载确认弹窗 ============ -->
+
 <div class="dl-modal" id="dlModal" onclick="if(event.target===this)closeDlModal()">
   <div class="dl-modal-card">
     <h3>先说句实在话：直接下载可能非常非常慢</h3>
@@ -1918,13 +1944,13 @@ html.anim-on .reveal.is-in{opacity:1;transform:none}
     <p class="dl-modal-note"><b>此代码仅使用 Python 标准库，无需安装任何第三方库。</b>只需有 Python 3 环境（到 python.org 官网下载安装即可）。</p>
     <div class="dl-code">
       <button class="dl-copy" id="dlCopyBtn" onclick="copyDlCode()">复制</button>
-      <pre><code id="dlCode"># ViMoxPC 高速下载器（Python 3 标准库，无需第三方库）
-# 流程: 选保存位置 -&gt; 测速选最快模式 -&gt; 下载; 按 q 取消并自动清理半成品
+      <pre><code id="dlCode">
+
 import urllib.request, threading, time, os, sys
 
 URL = "https://github.com/awde432/AWDE432.github.io/releases/download/v1.0.0/ViMoxPC_Setup.exe"
 
-# 1) 保存位置(可输错, 自动校验并回退)
+
 SAVE = input("下载到哪个文件夹？直接回车=当前目录\n&gt; ").strip()
 if not SAVE:
     SAVE = os.getcwd()
@@ -1933,13 +1959,13 @@ if not os.path.isdir(SAVE) or not os.access(SAVE, os.W_OK):
     SAVE = os.getcwd()
 FILE = os.path.join(SAVE, "ViMoxPC.exe")
 
-# 2) 探测大小与分块支持
+
 print("[1/3] 探测文件大小...")
 with urllib.request.urlopen(urllib.request.Request(URL, method="HEAD"), timeout=15) as r:
     size = int(r.headers.get("Content-Length", 0))
     support = "bytes" in r.headers.get("Accept-Ranges", "")
 
-# 3) 测速: 先预热连接, 再单线程 vs 8线程, 谁快用谁
+
 def warmup():
     try:
         req = urllib.request.Request(URL, headers={"Range": "bytes=0-262143"})
@@ -1949,7 +1975,7 @@ def warmup():
         pass
 
 def bench(n):
-    nbyte = 4 &lt;&lt; 20  # 每个连接测 4MB, 样本够大才不被冷启动污染
+    nbyte = 4 &lt;&lt; 20
     tmp = os.path.join(SAVE, "_vimox_speed.tmp")
     with open(tmp, "wb") as f:
         f.truncate(nbyte * n)
@@ -1983,7 +2009,7 @@ use_multi = support and s2 &gt; s1 * 1.05
 print("单线程 %.2f MB/s | 8线程 %.2f MB/s -&gt; %s" % (
     s1 / 1e6, s2 / 1e6, "8线程并发" if use_multi else "单线程(多线程无收益, 上限即单连速度)"))
 
-# 4) 正式下载(取消时线程自行退出并释放文件, 主进程才能删干净)
+
 done = [0]; cancel = [False]; start = time.time()
 N = 8
 if use_multi:
