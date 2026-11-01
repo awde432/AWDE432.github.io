@@ -69,7 +69,7 @@ a:hover{color:var(--brand-deep);text-decoration:underline}
 .brand .mark path{fill:none;stroke:var(--brand);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .footer .mark path{stroke:#7cc0f7}
 .brand .ver{font-family:var(--mono);font-size:.6875rem;font-weight:400;color:var(--ink-500);letter-spacing:.06em}
-.official-tag{display:inline-block;font-family:var(--sans);font-size:.6875rem;font-weight:600;color:#fff;background:var(--ok);padding:1px 8px;border-radius:2px;letter-spacing:.08em;align-self:center}
+.official-tag{display:inline-block;font-family:var(--sans);font-size:.625rem;font-weight:600;color:#fff;background:var(--ok);padding:1px 6px;border-radius:2px;letter-spacing:.04em;align-self:center}
 .hero-official{margin:var(--s4) 0 0;font-size:.875rem;color:var(--ink-600)}
 .hero-official b{color:var(--ink-900)}
 .nav-links{display:flex;gap:var(--s5);margin-left:auto;flex:1 1 auto;min-width:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
@@ -253,6 +253,8 @@ p{margin:0 0 var(--s3)}
   .fact:nth-child(3n){border-right:0}
   .case-grid,.cols-3{grid-template-columns:repeat(2,1fr)}
   .dl,.def-grid{grid-template-columns:1fr}
+  .official-tag{display:none}
+  .brand .ver{display:none}
 }
 @media (max-width:720px){
   .section{padding:var(--s7) 0}
@@ -333,7 +335,7 @@ p{margin:0 0 var(--s3)}
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top"><img class="mark" src="https://awde432.github.io/assets/vimoxPC.ico" alt="" width="28" height="28">ViMoxPC<span class="ver">v1.0.0</span><span class="official-tag">官方发布站</span></a>
+    <a class="brand" href="#top"><img class="mark" src="https://awde432.github.io/assets/vimoxPC.ico" alt="" width="28" height="28">ViMoxPC<span class="ver">v1.0.0</span><span class="official-tag">官方发布</span></a>
     <nav class="nav-links" aria-label="主导航">
       <a href="#what">这是什么</a>
       <a href="#features">功能</a>
