@@ -72,8 +72,9 @@ a:hover{color:var(--brand-deep);text-decoration:underline}
 .official-tag{display:inline-block;font-family:var(--sans);font-size:.6875rem;font-weight:600;color:#fff;background:var(--ok);padding:1px 8px;border-radius:2px;letter-spacing:.08em;align-self:center}
 .hero-official{margin:var(--s4) 0 0;font-size:.875rem;color:var(--ink-600)}
 .hero-official b{color:var(--ink-900)}
-.nav-links{display:flex;gap:var(--s5);margin-left:auto;flex-wrap:wrap}
-.nav-links a{font-size:.8125rem;color:var(--ink-600);letter-spacing:.01em}
+.nav-links{display:flex;gap:var(--s5);margin-left:auto;flex:1 1 auto;min-width:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.nav-links::-webkit-scrollbar{display:none;width:0;height:0}
+.nav-links a{font-size:.8125rem;color:var(--ink-600);letter-spacing:.01em;white-space:nowrap;flex-shrink:0}
 .nav-links a:hover{color:var(--brand);text-decoration:none}
 .nav-cta{display:flex;gap:var(--s2);align-items:center}
 
@@ -251,7 +252,6 @@ p{margin:0 0 var(--s3)}
   .fact:nth-child(3n){border-right:0}
   .case-grid,.cols-3{grid-template-columns:repeat(2,1fr)}
   .dl,.def-grid{grid-template-columns:1fr}
-  .nav-links{display:none}
 }
 @media (max-width:720px){
   .section{padding:var(--s7) 0}
@@ -2122,6 +2122,35 @@ function copyDlCode(){
   }
   tick();
   setInterval(tick, 1000);
+})();
+
+/* 导航横向滚动：鼠标靠近左右边缘自动滚动露出内容，滚动条隐藏 */
+(function(){
+  var sc = document.querySelector('.nav-links');
+  if (!sc) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raf = null, lastX = 0;
+  function loop(){
+    var rect = sc.getBoundingClientRect();
+    var rel = (lastX - rect.left) / Math.max(rect.width, 1);
+    var speed = 0;
+    if (rel < 0.18) speed = -6 * (0.18 - rel) / 0.18;
+    else if (rel > 0.82) speed = 6 * (rel - 0.82) / 0.18;
+    if (speed !== 0 && sc.scrollWidth > sc.clientWidth){
+      var before = sc.scrollLeft;
+      sc.scrollLeft += speed;
+      if (sc.scrollLeft !== before){ raf = requestAnimationFrame(loop); return; }
+    }
+    raf = null;
+  }
+  sc.addEventListener('mousemove', function(e){
+    if (reduce) return;
+    lastX = e.clientX;
+    if (!raf) raf = requestAnimationFrame(loop);
+  });
+  sc.addEventListener('mouseleave', function(){
+    if (raf){ cancelAnimationFrame(raf); raf = null; }
+  });
 })();
 </script>
 
