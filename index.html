@@ -2233,6 +2233,13 @@ html.anim-on .brand .mark{border-radius:6px;animation:brandGlow 4.5s ease-in-out
 .dl-modal-note{font-size:.85rem;color:var(--muted,#666)} .dl-modal-warn{margin:0 0 14px;padding:12px 14px;border:1px solid rgba(230,162,60,.55);background:rgba(255,244,220,.92);border-radius:10px;font-size:.9rem;line-height:1.75;color:#5b3d0a} .dl-modal-warn b{color:#a05a00}
 .dl-modal-legal{font-size:.78rem;color:var(--muted,#888);border-top:1px solid rgba(0,0,0,.08);margin:14px 0 0;padding-top:10px;line-height:1.6}
 .dl-verify{margin:14px 0 0;padding:12px 14px;border:1px solid rgba(0,120,212,.30);background:rgba(0,120,212,.045);border-radius:10px;font-size:.85rem;line-height:1.75;color:var(--ink-700,#33404d)}
+.dl-dns{margin:14px 0 0;padding:12px 14px;border:1px solid rgba(0,0,0,.16);background:#f7f8fa;border-radius:10px;font-size:.85rem;line-height:1.75;color:var(--ink-700,#33404d)}
+.dl-dns h4{margin:0 0 8px;font-size:.95rem;line-height:1.5;color:var(--ink-900,#1a2330)}
+.dl-dns p{margin:7px 0}
+.dl-dns ol{margin:8px 0 0;padding-left:22px}
+.dl-dns li{margin:7px 0}
+.dl-dns .dl-step{font-weight:700;color:var(--ink-900,#1a2330)}
+@media (max-width:560px){.dl-dns{padding:10px 11px;font-size:.82rem}.dl-dns ol{padding-left:19px}}
 .dl-verify p{margin:0 0 7px}
 .dl-verify p:last-child{margin-bottom:0}
 .dl-verify b{color:var(--ink-900)}
@@ -2314,7 +2321,19 @@ html.anim-on .brand .mark{border-radius:6px;animation:brandGlow 4.5s ease-in-out
     <div class="dl-modal-warn">
       <p><b>中国大陆下载提示：</b>ViMoxPC 安装包约 282MB，托管在 GitHub 海外服务器。中国大陆网络下载这种大型文件时，可能会出现<b>下载不完全</b>，导致安装包报错（例如提示 “The setup files are corrupted”）。</p>
       <p>如果你多次尝试下载均失败，可以加入官方用户群 <b>QQ 群：1095743124</b>，在群里说明情况，群内可能帮助你获取安装包。</p>
-      <p><b>特别注意：</b>如果点下载后浏览器显示“<b>无法访问此页面</b>”“<b>拒绝连接</b>”“<b>ERR_CONNECTION_REFUSED</b>”，提示里出现 <b>release-assets.githubusercontent.com</b>，那是你所在网络把 GitHub 的文件服务器域名拦了，<b>不是安装包坏了</b>。这种情况等多久都不会好，<b>请直接加入 QQ 群：1095743124 获取最新安装包</b>。</p>
+      <p><b>特别注意：</b>如果点下载后浏览器显示“<b>无法访问此页面</b>”“<b>拒绝连接</b>”“<b>ERR_CONNECTION_REFUSED</b>”，提示里出现 <b>release-assets.githubusercontent.com</b>，那是你所在网络的 DNS 把 GitHub 的文件服务器域名解释错了，<b>不是安装包坏了</b>。这种情况等多久都不会好——原因和三种处理办法，看<b>下面那个灰框</b>。</p>
+    </div>
+    <div class="dl-dns">
+      <h4>下载一直卡着不动、一点就报错？八成是你电脑的 DNS 在捣鬼</h4>
+      <p>GitHub 的文件其实挂在 <b>release-assets.githubusercontent.com</b> 这个域名后面。有些运营商或路由器的 DNS 会把它解释成 <b>127.0.0.1</b>——那是<b>你自己这台电脑</b>的意思。浏览器等于在向自己电脑要一个 295MB 的安装包，那当然永远下不动、或者直接“拒绝连接”。<b>这跟安装包没关系，跟本网站也没关系，是本机域名解析出了问题。</b></p>
+      <p><b>想确认是不是这个原因（可选，不想折腾可以跳过）：</b>按 <b>Win + X</b> 打开「终端」或「Windows PowerShell」，输入下面这行后回车：</p>
+      <code class="dl-hash">nslookup release-assets.githubusercontent.com</code>
+      <p>结果里出现 <b>127.0.0.1</b> → 就是这个问题，按下面三步处理。<br>结果是 <b>185.199.1xx.133</b> 这类地址 → 你这边解析正常，下得慢就只是慢，多等一会儿，或者改用上面的脚本下载。</p>
+      <ol>
+        <li><span class="dl-step">第一步，最省事：</span>手机开个热点，让电脑连手机流量，再点一次下载。手机网络基本都能正常解析，下完再拷回电脑就行。</li>
+        <li><span class="dl-step">第二步，还不行就换 DNS：</span>「设置」→「网络和 Internet」→「更改适配器选项」→ 右键正在用的那个网络 →「属性」→ 双击「Internet 协议版本 4 (TCP/IPv4)」→ 选「使用下面的 DNS 服务器地址」→ 首选填 <b>223.5.5.5</b>，备用填 <b>119.29.29.29</b> → 一路点确定，然后把浏览器完全关掉再打开。<b>万一改完发现上不了网，把那里改回「自动获得 DNS 服务器地址」就恢复原样</b>，不会弄坏电脑。</li>
+        <li><span class="dl-step">第三步，别耗着了：</span>直接加 <b>QQ 群：1095743124</b>，在群里说一声，要安装包最快。</li>
+      </ol>
     </div>
     <p>ViMoxPC 的安装包托管在 <b>GitHub</b> 上，国内直连下载速度很不稳定，浏览器点下载大概率要等很久甚至失败。给你两个选择：</p>
     <ol>
